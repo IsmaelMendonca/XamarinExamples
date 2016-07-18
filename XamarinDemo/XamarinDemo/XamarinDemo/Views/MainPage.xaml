@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:vm="clr-namespace:XamarinDemo.ViewModels"
+	x:Class="XamarinDemo.Views.MainPage">
+
+	<ContentPage.BindingContext>
+		<vm:MainViewModel />
+	</ContentPage.BindingContext>
+	
+	<StackLayout>
+		<Label Text="Nome" />
+		<Entry Text="{Binding Name, Mode=TwoWay}" />
+		<Label Text="Resultado" />
+		<Entry Text="{Binding Result, Mode=TwoWay}" />
+		<Button Text="Login" Command="{Binding LoginCommand}" />
+		<Button Text="Limpar" Command="{Binding ClearCommand}" />
+	</StackLayout>
+</ContentPage>
